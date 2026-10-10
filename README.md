@@ -1,10 +1,13 @@
-You can download the binary in [Releases](https://github.com/Axiz23/vaultwarden-binary/releases) pages!
+**This is un-official [Vaultwarden](https://github.com/dani-garcia/vaultwarden) binary**.
+
+You can download the Vaultwarden binary in [Releases](https://github.com/Axiz23/vaultwarden-binary/releases) pages!
 
 ## How to install & Run
-1. Download binary and Select your version want
+1. Download binary and Choose the version you wand
 2. Extract the ZIP file.
 3. Run ```./vaultwarden-amd64-musl``` or ```./vaultwarden-arm64-musl```
 
-## Static binary
-- Built on musl and ready to use
-- no external library needed
+## Information
+- Binary only, no Web Vault includes
+- Static binary, run on every architecture amd64/arm64
+- Maybe delayed to Update the Release
