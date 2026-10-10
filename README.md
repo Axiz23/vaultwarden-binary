@@ -8,5 +8,5 @@ You can download the Vaultwarden binary in [Releases](https://github.com/Axiz23/
 3. Run ```./vaultwarden-amd64-musl``` or ```./vaultwarden-arm64-musl```
 
 ## Information
-- Binary only, no Web Vault includes
+- Binary only, no Web Vault includes. Download [Web Vault] from (https://github.com/dani-garcia/bw_web_builds/releases/tag/v2026.7.0)
 - Release may be delayed after upstream updates
