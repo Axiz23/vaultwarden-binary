@@ -1,4 +1,4 @@
-name: Build Vaultwarden musl
+name: Build Vaultwarden musl (Manual)
 
 on:
   workflow_dispatch:
