@@ -2,8 +2,6 @@ name: Build Vaultwarden musl
 
 on:
   schedule:
-    # Poll upstream every 30 minutes. A release is only built once it is
-    # at least COOLDOWN_SECONDS old (see below).
     - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
@@ -19,8 +17,6 @@ on:
 permissions:
   contents: read
 
-# Builds take a long time. Without this, a scheduled run could start a second
-# build for the same version while the first one is still running.
 concurrency:
   group: vaultwarden-musl
   cancel-in-progress: false
@@ -30,7 +26,6 @@ env:
   COOLDOWN_SECONDS: "3600"
   DOCKER_BUILD_RECORD_UPLOAD: "false"
   DOCKER_BUILD_SUMMARY: "false"
-  SOURCE_COMMIT: ${{ github.sha }}
 
 jobs:
   check:
@@ -153,8 +148,8 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
-      contents: write # create the release and tag
-      actions: read # download this run's artifacts via gh
+      contents: write
+      actions: read
     env:
       GH_TOKEN: ${{ github.token }}
       VERSION: ${{ needs.check.outputs.version }}
